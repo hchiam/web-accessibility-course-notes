@@ -16,3 +16,5 @@ https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoe
 * tabindex > 0 is **NOT** recommended
 * typically do **NOT** have to use tabindex for non-interative elements like headers (screen readers can read them)
   * exception: [SPA](https://en.wikipedia.org/wiki/Single-page_application)-like interaction menu anchor clicks -> good case for `tabindex="-1"` and `focus()` on a header that "appears" on the page
+* skip links help switch device users: hidden links to jump to page content (for an example, visit https://github.com/ and hit tab)
+  * example: `<a href="#main-content-id" class="skip-link">Skip to main content</a>`
