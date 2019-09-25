@@ -9,3 +9,4 @@ https://webaim.org/standards/wcag/checklist
 * `tabindex="-1"` = not in tab order but can be focused with focus() in js = great for modals (`document.querySelector('#modal').focus()`)
 * `tabindex="0"` = added to tab order (and can also be focused with focus() in js = useful for custom elements (e.g. custom `div` dropdown)
 * tabindex > 0 is **NOT** recommended
+* typically do **NOT** have to use tabindex for non-interative elements like headers (screen readers can read them)
