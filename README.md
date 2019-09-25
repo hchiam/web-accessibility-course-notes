@@ -10,3 +10,4 @@ https://webaim.org/standards/wcag/checklist
 * `tabindex="0"` = added to tab order (and can also be focused with focus() in js = useful for custom elements (e.g. custom `div` dropdown)
 * tabindex > 0 is **NOT** recommended
 * typically do **NOT** have to use tabindex for non-interative elements like headers (screen readers can read them)
+  * exception: [SPA](https://en.wikipedia.org/wiki/Single-page_application)-like interaction menu anchor clicks -> good case for `tabindex="-1"` and `focus()` on a header that "appears" on the page
