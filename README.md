@@ -1,6 +1,6 @@
 # web-accessibility-course-notes
 
-<https://classroom.udacity.com/courses/ud891/>
+<https://classroom.udacity.com/courses/ud891>
 
 ## Resources
 
