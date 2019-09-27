@@ -56,6 +56,7 @@
 * `alt="description of the image in its context to provide the same experience"`. Tricky example: header logo is also link to home. Instead of `"Home"`, just do `"<Page name as shown in logo image>"`.
 * `alt=""` = good if a description would be redundant in the image's context, but we also don't want the screen reader to read out the file name either. Tricky example: magnifying glass next to search field that already gets read out as a searchbox.
 * Include headers in your web page! They give users of screen readers an easy way to quickly navigate your page.
+* Don't go overboard with screen-reader-only headers.
 
 ### Random Notes
 
