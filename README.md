@@ -25,3 +25,15 @@
 * Helpful easy test: tab through page and see if things make sense, e.g. the focus order and focused item is shown.
   * In your browser's Console: `document.activeElement` gives you currently-focused item.
 * [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) Chrome extension -> unselect all except Accessibility to get an audit of the current page.
+* Keyboard traps are usually bad but can be temporarily good: while a modal is open, and then return focus to last element when modal is closed. `firstTabStop.focus()`, `lastTabStop.focus()`, `focusedElementBeforeModal.focus()`
+
+  * ```js
+    var focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contentediteable]';
+    var focusableElements = modal.querySelectorAll(focusableElementsString);
+    // convert NodeList to Array
+    focusableElements = Array.prototype.slice.call(focusableElements);
+    var firstTabStop = focusableElements[0];
+    var lastTabStop = focusableElements[focusableElements.length - 1];
+    ```
+
+  * <https://classroom.udacity.com/courses/ud891/lessons/7962031279/concepts/79621414230923>
