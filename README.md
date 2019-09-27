@@ -55,8 +55,16 @@
   * Much of the DOM has implicit semantic meaning. (Example: `button` instead of `div`)
 * `alt="description of the image in its context to provide the same experience"`. Tricky example: header logo is also link to home. Instead of `"Home"`, just do `"<Page name as shown in logo image>"`.
 * `alt=""` = good if a description would be redundant in the image's context, but we also don't want the screen reader to read out the file name either. Tricky example: magnifying glass next to search field that already gets read out as a searchbox.
-* Include headers in your web page! They give users of screen readers an easy way to quickly navigate your page.
+* Include meaningful headers in your web page! They give users of screen readers an easy way to quickly navigate your page.
 * Don't go overboard with screen-reader-only headers.
+* Make link text usable for screen reader shortcut lists:
+  * Bad: "Learn more." (About what? Unclear in a list of link texts.)
+  * Good: "Learn more about responsive layouts."
+  * Better: "Responsive Layouts" (Turn the title into a link.)
+* Example semantic HTML elements: `main`, `header`, `footer`, `nav`, `section` (usually has a h1/h2/... header in it), `article`, and `aside`.
+  * You can simplify CSS to refer to `header` instead of `.header`, while also making the HTML more semantic for assistive tech users.
+* Meaningful headings and link text, and good page structure.
+* Don't try to control the experience a screen reader would have, since that can confuse users. E.g.: the tool has ways work around odd names, like spelling them out.
 
 ### Random Notes
 
