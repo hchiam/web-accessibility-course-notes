@@ -14,6 +14,9 @@
 
 ## Notes
 
+<details>
+<summary>Focus</summary>
+
 ### Focus
 
 * DOM order = tab order -> so: place in logical order in the DOM, and avoid CSS that positions elements visually in a different order
@@ -39,6 +42,11 @@
     ```
 
   * <https://classroom.udacity.com/courses/ud891/lessons/7962031279/concepts/79621414230923>
+
+</details>
+
+<details>
+<summary>Semantics</summary>
 
 ### Semantics
 
@@ -66,8 +74,15 @@
 * Meaningful headings and link text, and good page structure.
 * Don't try to control the experience a screen reader would have, since that can confuse users. E.g.: the tool has ways work around odd names, like spelling them out.
 
+</details>
+
+<details>
+<summary>Random Notes</summary>
+
 ### Random Notes
 
 * https://developer.mozilla.org/en-US/docs/Tools/Web_Console/The_command_line_interpreter#Helper_commands
   * In web dev console: `$('h1')` = `document.querySelector('h1')`
   * In web dev console: `$$('h1,h2,h3')` = `document.querySelectorAll('h1,h2,h3')` but returns an array instead of a NodeList.
+
+</details>
