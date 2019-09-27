@@ -22,3 +22,6 @@
   * exception: [SPA](https://en.wikipedia.org/wiki/Single-page_application)-like interaction menu anchor clicks -> good case for `tabindex="-1"` and `focus()` on a header that "appears" on the page
 * skip links help switch device users: hidden links to jump to page content (for an example, visit <https://github.com/> and hit tab)
   * example: `<a href="#main-content-id" class="skip-link">Skip to main content</a>` and `.skip-link { position: absolute; top: -40px; } .skip-link:focus { top: 0; }`
+* Helpful easy test: tab through page and see if things make sense, e.g. the focus order and focused item is shown.
+  * In your browser's Console: `document.activeElement` gives you currently-focused item.
+* [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) Chrome extension -> unselect all except Accessibility to get an audit of the current page.
