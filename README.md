@@ -12,7 +12,9 @@
 
 <https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en>
 
-## Stray notes for now
+## Notes
+
+### Focus
 
 * DOM order = tab order -> so: place in logical order in the DOM, and avoid CSS that positions elements visually in a different order
 * `tabindex="-1"` = not in tab order but can be focused with focus() in js = great for modals (`document.querySelector('#modal').focus()`)
@@ -37,3 +39,19 @@
     ```
 
   * <https://classroom.udacity.com/courses/ud891/lessons/7962031279/concepts/79621414230923>
+
+### Semantics
+
+* You can address diverse assistive technologies <- by expressing semantics programmatically <- by understand affordances.
+* Affordances are like common conventions that users are used to. At the very least, they minimize training time to get used to.
+* To express semantics programmatically: (as per AIM WCAG checklist)
+  * **role** (example: "combo box")
+  * **label/name** (example: "preferred seat type")
+  * **value** (example: "no preference")
+  * **state** (example: "collapsed")
+  * (These *are* the affordances!)
+* Accessibility tree <- DOM tree:
+  * Pretty much the same.
+  * Much of the DOM has implicit semantic meaning. (Example: `button` instead of `div`)
+* `alt="description of the image in its context to provide the same experience"`. Tricky example: header logo is also link to home. Instead of `"Home"`, just do `"<Page name as shown in logo image>"`.
+* `alt=""` = good if a description would be redundant in the image's context, but we also don't want the screen reader to read out the file name either. Tricky example: magnifying glass next to search field that already gets read out as a searchbox.
