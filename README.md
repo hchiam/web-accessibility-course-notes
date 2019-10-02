@@ -77,6 +77,18 @@
 </details>
 
 <details>
+<summary>Semantics: ARIA</summary>
+
+### Semantics: ARIA
+
+#### Built-in HTML Semantics Sometimes Isn't Enough
+
+* Dropdowns: currently no standard HTML element.
+* Another example: urgent user notification.
+
+</details>
+
+<details>
 <summary>Random Notes</summary>
 
 ### Random Notes
