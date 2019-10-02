@@ -95,6 +95,7 @@
   * modify element behaviour.
   * add focusability.
   * add keyboard event handling.
+* ARIA design patterns *and* links to **live examples**: <https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex>
 
 </details>
 
