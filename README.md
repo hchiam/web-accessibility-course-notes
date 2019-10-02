@@ -1,4 +1,4 @@
-# web-accessibility-course-notes
+# Web Accessibility (a11y) Course Notes
 
 <https://classroom.udacity.com/courses/ud891>
 
