@@ -12,7 +12,7 @@
 
 <https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en>
 
-### ARIA design patterns and links to **live examples**
+### ARIA design patterns and links to __*live examples*__
 
 <https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex>
 
