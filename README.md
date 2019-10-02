@@ -81,10 +81,18 @@
 
 ### Semantics: ARIA
 
-#### Built-in HTML Semantics Sometimes Isn't Enough
-
-* Dropdowns: currently no standard HTML element.
-* Another example: urgent user notification.
+* Built-in HTML Semantics Sometimes Isn't Enough
+  * Dropdowns: currently no standard HTML element.
+  * Another example: urgent user notification.
+* Example: `aria-checked="true"` and `aria-checked="false"` (ARIA HTML properties must be explicitly indicated. Good for custom elements.)
+  * But you have to take care of a lot more.
+  * Example: `this.el.setAttribute('role', 'checkbox');`
+  * Example: `if (this.el.hasAttribute('checked')) { this.el.setAttribute('aria-checked', 'true'); }`
+* ARIA *only* modifies the accessibility tree. It does not:
+  * modify element appearance.
+  * modify element behaviour.
+  * add focusability.
+  * add keyboard event handling.
 
 </details>
 
