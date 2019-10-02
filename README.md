@@ -83,11 +83,13 @@
 
 * Built-in HTML Semantics Sometimes Isn't Enough
   * Dropdowns: currently no standard HTML element.
-  * Another example: urgent user notification.
-* Example: `aria-checked="true"` and `aria-checked="false"` (ARIA HTML properties must be explicitly indicated. Good for custom elements.)
+  * Another example: urgent user notification (`<div role="alert">Could not connect!</div>`)
+* Example: `role="checkbox"` and then ALSO add `aria-checked="true"` and `aria-checked="false"` (ARIA HTML properties must be explicitly indicated. Good for custom elements.)
   * But you have to take care of a lot more.
   * Example: `this.el.setAttribute('role', 'checkbox');`
   * Example: `if (this.el.hasAttribute('checked')) { this.el.setAttribute('aria-checked', 'true'); }`
+* Example: expandable tree: `role="tree"`, `role="group"`, `role="treeItem"`, `aria-expanded="true"`, `aria-expanded="false"`
+* Example: `<button ... aria-label="Filter">`
 * ARIA *only* modifies the accessibility tree. It does not:
   * modify element appearance.
   * modify element behaviour.
