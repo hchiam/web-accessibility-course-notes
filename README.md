@@ -101,6 +101,40 @@
   * add keyboard event handling.
 * ARIA design patterns and links to __*live examples*__: <https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex>
 
+* ```js
+    // set ARIA role = radio group
+    this.el.setAttribute('role', 'radiogroup');
+
+    var firstButton = true;
+    for (var button of this.buttons) {
+      if (firstButton) {
+        button.tabIndex = '0';
+        firstButton = false;
+      } else {
+        button.tabIndex = '-1';
+      }
+
+      // set ARIA role = radio
+      button.setAttribute('role', 'radio');
+    }
+  ```
+
+* ```js
+    RadioGroup.prototype.changeFocus = function() {
+      // old button:
+      this.focusedButton.tabIndex = -1;
+      this.focusedButton.removeAttribute('checked');
+      this.focusedButton.setAttribute('aria-checked', 'false');
+
+      // new button:
+      this.focusedButton = this.buttons[this.focusedIdx];
+      this.focusedButton.tabIndex = 0;
+      this.focusedButton.focus();
+      this.focusedButton.setAttribute('checked', '');
+      this.focusedButton.setAttribute('aria-checked', 'true');
+    };
+  ```
+
 </details>
 
 <details>
