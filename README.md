@@ -319,6 +319,8 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
 
 #### Responsive UIs (flexible device/zoom views)
 
+* Include this in page `head`: `<meta name="viewport" content="width=device-width, initial-scale=1">`
+
 #### Colour Contrast
 
 </details>
