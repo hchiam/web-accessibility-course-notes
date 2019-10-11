@@ -220,6 +220,19 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
 * Hide element only in AT:
   * `aria-hidden="true"` (hides from AT all its descendants, except element referred to by `aria-labelledby` or `aria-describedby`, which makes sense based on earlier notes).
 
+#### Alerting the User
+
+* Instead of waiting for user to get to the element in the DOM.
+* `aria-live="..."`: off (default/fallback), polite, assertive.
+  * "polite" = when you're done whatever you're doing. (waits)
+  * "assertive" = you need to know this right now! (interrupts)
+* **Troubleshooting tips when `aria-live` isn't speaking:**
+  * Test on different platforms, since they can react
+  * Try including `aria-live` attributes in initial page load.
+  * Try triggering style change on the element: hidden -> visible.
+  * Try changing content of the element.
+  * Try appending new element with `aria-live`.
+
 </details>
 
 <details>
