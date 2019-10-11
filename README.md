@@ -187,9 +187,10 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
 * Example: `aria-labelledby="..."` = label/name (see earlier notes).
 * `aria-owns` = "treat ... as my **child** element" (even if separate in the DOM), like for submenus.
   * But why not just do so in DOM? Maybe for visual presentation or because of element reuse in different contexts.
-  * `aria-owns` is the most common ARIA relationship attribute.
-* `aria-activedescendant` = "present ... as the apparent focused element when I have page focus" (this is not actually moving the roving focus).
+  * `aria-owns` is a very common ARIA relationship attribute. Good to know!
+* `aria-activedescendant` = "present ... as the **apparent focused** element when I have page focus" (this is not actually moving the roving focus).
   * Example: typing in a textbox that has page focus, but while reading out an apparently-focused filtered option shown in a dropdown.
+  * This basically can graft together different parts of the DOM onto this node in the Accessibility Tree.
 * `aria-describedby` = "use ... as my non-critical description" (NOT name/label), like password requirements (vs. password characters typed). Even if that identified element is hidden from the DOM (just like aia-labelledby).
 * `aria-posinset` and `aria-setsize` = "specify on this element its actual position in the set, and the actual number of items in its set", like when you don't know the size of the list when using lazy loading.
   * Example:
@@ -209,14 +210,14 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
 
 #### Hiding/Showing Only for Accessibility Tree (AT)
 
-* Hide only everyone:
+* Hide element only everyone:
   * Native explicitly hidden: `visibility: hidden;`, `display:none`, or attribute `hidden`.
-* Show only in AT:
+* Show label only in AT:
   * Make far off screen, e.g. `position: absolute; left: -10000px;`
-  * `aria-label="Some text that only screen-readers can access."`
-  * `aria-labelledby="some-hidden-element"`
-  * `aria-describedby="some-hidden-element"`
-* Hide only in AT:
+  * Or: `aria-label="Some text that only screen-readers can access."`
+  * Or: `aria-labelledby="some-hidden-element"`
+  * Or: `aria-describedby="some-hidden-element"`
+* Hide element only in AT:
   * `aria-hidden="true"` (hides from AT all its descendants, except element referred to by `aria-labelledby` or `aria-describedby`, which makes sense based on earlier notes).
 
 </details>
