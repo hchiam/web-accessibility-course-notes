@@ -298,6 +298,9 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
   }
   ```
 
+* If you implement custom elements, you might get focus rings where you don't want them, so to differentiate between mouse clicks and keyboard tags, you might be able to find a shim here: <https://github.com/alice/modality>
+  * Right now, something like Firefox's `:-moz-focusring` is not implemented on all browsers.
+
 #### ARIA States
 
 #### Responsive UIs (flexible device/zoom views)
