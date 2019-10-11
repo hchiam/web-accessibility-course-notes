@@ -146,6 +146,38 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
     };
   ```
 
+* `aria-label` example: name = "menu":
+
+  ```html
+  <button aria-label="menu"
+          class="hamburger-menu-icon">
+  </button>
+  ```
+
+* `aria-label` example: name = "close" (not "X"):
+
+  ```html
+  <button aria-label="close">
+    X
+  </button>
+  ```
+
+* `aria-labelledby` example: name = "Drink options" from another element (not just whatever's in "..."):
+
+  ```html
+  <span id="rg-label">
+    Drink options
+  </span>
+  <div role="radiogroup"
+       aria-labelledby="rg-label">
+    ...
+  </div>
+  ```
+
+  * Notes: `aria-labelledby` can be put on any element, not just a `label` element, but it does not give you the nice label-clicking behaviour that `label` gives you. Also, you place `aria-labelledby="..."` on the element, which is opposite of putting `for="..."` on the `label`. `aria-labelledby` can take a list of elements to concatenate the name from (even from the element itself! and even from hidden elements!).
+
+* In terms of precedence: `aria-labelledby` > `aria-label` > native `label`
+
 </details>
 
 <details>
