@@ -320,6 +320,13 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
 #### Responsive UIs (flexible device/zoom views)
 
 * Include this in page `head`: `<meta name="viewport" content="width=device-width, initial-scale=1">`
+  * (Stray observation: Easily generated with `!` snippet using Emmet in VSCode.)
+* Favour relative units over `px`:
+  * `%`, `em`, or `rem` respond to zoom and responsively move other items down the page.
+  * `em` and `rem` are better than `px` for text since some browsers can zoom just the text on a page via user settings.
+* **48dp minimum mobile touch target size** = 48 x 48 pixel area ~ 9 mm ~ finger pad.
+  * You can achieve that with padding.
+* **32dp margin around touch target** (horizontally and vertically)
 
 #### Colour Contrast
 
