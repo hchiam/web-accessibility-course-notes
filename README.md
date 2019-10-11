@@ -281,6 +281,7 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
   :focus { /* better */
     outline: 0; /* browsers handle outline inconsistently */
     box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0.8); /* consistent across browsers */
+    text-decoration: underline; /* visual indicator that doesn't rely on colour */
   }
   ```
 
