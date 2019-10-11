@@ -19,6 +19,17 @@ My notes for the Udacity course: <https://classroom.udacity.com/courses/ud891>
 ## Notes
 
 <details>
+<summary>Motivation</summary>
+
+## Motivation
+
+Making your website accessible helps everyone. Disability is more broad than what you might typically think of as disability: aging, temporary disability, and situational disability even for healthy individuals. This goes beyond permanent disability and can affect everyone.
+
+Aside: I found [an article on Medium.com that gives more examples](https://medium.com/swlh/why-web-accessibility-is-far-more-important-than-you-think-831d9bfdf9af).
+
+</details>
+
+<details>
 <summary>Focus</summary>
 
 ### Focus
