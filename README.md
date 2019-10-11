@@ -217,7 +217,7 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
   * `aria-labelledby="some-hidden-element"`
   * `aria-describedby="some-hidden-element"`
 * Hide only in AT:
-  * `aria-hidden="true"` (hides from AT all its descendants, except element referred to by `aria-labelledby` or `aria-describedby`, which makes sense).
+  * `aria-hidden="true"` (hides from AT all its descendants, except element referred to by `aria-labelledby` or `aria-describedby`, which makes sense based on earlier notes).
 
 </details>
 
