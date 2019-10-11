@@ -249,6 +249,62 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
 <details>
 <summary>Random Notes</summary>
 
+<details>
+<summary>Style</summary>
+
+### Style
+
+#### Overview
+
+* Styles for focus and ARIA states.
+* Responsive UIs (flexible device/zoom views).
+* Colour choices/contrast.
+
+#### Focus
+
+* Sometimes the focus ring is hard to see or doesn't look good.
+* Give alternate indication instead of only clearing outline.
+
+* ```css
+  :focus { /* BAD */
+    outline: 0;
+  }
+  ```
+
+* ```css
+  :focus { /* good */
+    outline: 1px dotted #FFF;
+  }
+  ```
+
+* ```css
+  :focus { /* better */
+    outline: 0; /* browsers handle outline inconsistently */
+    box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0.8); /* consistent across browsers */
+  }
+  ```
+
+* ```css
+  /* to improve style around radio options,
+   * make the focus ring on radio buttons
+   * only wrap around the radio icon */
+  .radio:focus {
+    outline: 0;
+  }
+
+  .radio:focus::before {
+    box-shadow: 0 0 1px 2px #5B9DD9;
+  }
+  ```
+
+#### ARIA States
+
+#### Responsive UIs (flexible device/zoom views)
+
+#### Colour Contrast
+
+</details>
+
 ### Random Notes
 
 * https://developer.mozilla.org/en-US/docs/Tools/Web_Console/The_command_line_interpreter#Helper_commands
