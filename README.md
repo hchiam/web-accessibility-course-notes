@@ -1,6 +1,6 @@
 # Web Accessibility (a11y) Course Notes
 
-<https://classroom.udacity.com/courses/ud891>
+My notes for the Udacity course: <https://classroom.udacity.com/courses/ud891>
 
 ## Resources
 
