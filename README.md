@@ -300,6 +300,23 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
 
 #### ARIA States
 
+* You can clean up the selectors while also having a way to verify you're correctly updating ARIA states. So instead of this:
+
+  ```css
+  .toggle.pressed,
+  .toggle[aria-pressed="true"] {
+    ...
+  }
+  ```
+
+  you replace it with just this:
+
+  ```css
+  .toggle[aria-pressed="true"] {
+    ...
+  }
+  ```
+
 #### Responsive UIs (flexible device/zoom views)
 
 #### Colour Contrast
