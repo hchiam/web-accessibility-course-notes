@@ -162,7 +162,7 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
   </button>
   ```
 
-* `aria-labelledby` example: name = "Drink options" from another element (not just whatever's in "..."):
+* `aria-labelledby` example: name/label = "Drink options" from another element (not just whatever's in "..."):
 
   ```html
   <span id="rg-label">
@@ -174,11 +174,37 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
   </div>
   ```
 
+  * This is an example of an ARIA relationship attribute (links 2 or more elements).
+
   * Notes: `aria-labelledby` can be put on any element, not just a `label` element, but it does not give you the nice label-clicking behaviour that `label` gives you. Also, you place `aria-labelledby="..."` on the element, which is opposite of putting `for="..."` on the `label`. `aria-labelledby` can take a list of elements to concatenate the name from (even from the element itself! and even from hidden elements!).
 
 * In terms of precedence: `aria-labelledby` > `aria-label` > native `label`
 * ARIA roles may be redundant in some cases: e.g.: `<input type="checkbox" role="checkbox">` or `<main role="main">`
   * but you might need this redundancy for wider browser support.
+
+#### ARIA Relationship Attributes
+
+* Example: `aria-labelledby="..."` = label/name (see earlier notes).
+* `aria-owns` = "treat ... as my **child** element" (even if separate in the DOM), like for submenus.
+  * But why not just do so in DOM? Maybe for visual presentation or because of element reuse in different contexts.
+  * `aria-owns` is the most common ARIA relationship attribute.
+* `aria-activedescendant` = "present ... as the actual focused element when I have page focus".
+* `aria-describedby` = "use ... as my non-critical description" (NOT name/label), like password requirements (vs. password characters typed). Even if that identified element is hidden from the DOM (just like aia-labelledby).
+* `aria-posinset` and `aria-setsize` = "specify on this element its actual position in the set, and the actual number of items in its set", like when you don't know the size of the list when using lazy loading.
+  * Example:
+
+    ```html
+    <div role="listbox"> <!-- aria-posinset + aria-setsize on items not on container -->
+      <!-- Use dynamic HTML techniques to let user explore up. -->
+      <div role="option"
+           aria-posinset="857"
+           aria-setsize="1000">Item 857 shows up first, maybe due to lazy loading.</div>
+      <div role="option"
+           aria-posinset="858"
+           aria-setsize="1000">Item 858 shows up last, maybe due to lazy loading.</div>
+      <!-- Use dynamic HTML techniques to let user explore down. -->
+    </div>
+    ```
 
 </details>
 
