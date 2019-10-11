@@ -188,7 +188,8 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
 * `aria-owns` = "treat ... as my **child** element" (even if separate in the DOM), like for submenus.
   * But why not just do so in DOM? Maybe for visual presentation or because of element reuse in different contexts.
   * `aria-owns` is the most common ARIA relationship attribute.
-* `aria-activedescendant` = "present ... as the actual focused element when I have page focus".
+* `aria-activedescendant` = "present ... as the apparent focused element when I have page focus" (this is not actually moving the roving focus).
+  * Example: typing in a textbox that has page focus, but while reading out an apparently-focused filtered option shown in a dropdown.
 * `aria-describedby` = "use ... as my non-critical description" (NOT name/label), like password requirements (vs. password characters typed). Even if that identified element is hidden from the DOM (just like aia-labelledby).
 * `aria-posinset` and `aria-setsize` = "specify on this element its actual position in the set, and the actual number of items in its set", like when you don't know the size of the list when using lazy loading.
   * Example:
