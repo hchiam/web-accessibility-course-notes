@@ -23,7 +23,7 @@ My notes for the Udacity course: <https://classroom.udacity.com/courses/ud891>
 
 ## Motivation
 
-Making your website accessible helps everyone. Disability is more broad than what you might typically think of as disability: aging, temporary disability, and situational disability even for healthy individuals. This goes beyond permanent disability and can affect everyone.
+Design for everyone. Making your website accessible helps everyone. Disability is more broad than what you might typically think of as disability: aging, temporary disability, and situational disability even for healthy individuals. This goes beyond permanent disability and can affect everyone.
 
 Aside: I found [an article on Medium.com that gives more examples](https://medium.com/swlh/why-web-accessibility-is-far-more-important-than-you-think-831d9bfdf9af) and [another one](https://medium.com/valtech-design/inclusive-design-dd4e03f82094).
 
@@ -146,7 +146,7 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
     };
   ```
 
-* `aria-label` example: name = "menu":
+* `aria-label` example: name = "menu" (for screen-reader only):
 
   ```html
   <button aria-label="menu"
@@ -154,7 +154,7 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
   </button>
   ```
 
-* `aria-label` example: name = "close" (not "X"):
+* `aria-label` example: name = "close", not "X" (for screen-reader only):
 
   ```html
   <button aria-label="close">
@@ -191,7 +191,7 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
 * `aria-activedescendant` = "present ... as the **apparent focused** element when I have page focus" (this is not actually moving the roving focus).
   * Example: typing in a textbox that has page focus, but while reading out an apparently-focused filtered option shown in a dropdown.
   * This basically can graft together different parts of the DOM onto this node in the Accessibility Tree.
-* `aria-describedby` = "use ... as my non-critical description" (NOT name/label), like password requirements (vs. password characters typed). Even if that identified element is hidden from the DOM (just like aia-labelledby).
+* `aria-describedby` = "use ... as my non-critical description" (NOT name/label) as extra info, like password requirements (vs. password characters typed). Even if that identified element is hidden from the DOM (just like aia-labelledby).
 * `aria-posinset` and `aria-setsize` = "specify on this element its actual position in the set, and the actual number of items in its set", like when you don't know the size of the list when using lazy loading.
   * Example:
 
@@ -216,7 +216,7 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
   * Make far off screen, e.g. `position: absolute; left: -10000px;`
   * Or: `aria-label="Some text that only screen-readers can access."`
   * Or: `aria-labelledby="some-hidden-element"`
-  * Or: `aria-describedby="some-hidden-element"`
+  * Or: `aria-describedby="some-hidden-element-for-extra-info"`
 * Hide element only in AT:
   * `aria-hidden="true"` (hides from AT all its descendants, except element referred to by `aria-labelledby` or `aria-describedby`, which makes sense based on earlier notes).
 
@@ -232,6 +232,17 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
   * Try triggering style change on the element: hidden -> visible.
   * Try changing content of the element.
   * Try appending new element with `aria-live`.
+* `aria-atomic` = say the whole contents each time.
+* `aria-relevant` = say the changes of this type:
+  * `="text"` = text changed.
+  * `="additions"` = added element.
+  * `="removals"` = removed element.
+  * `="all"` = `="additions removals text" = any change triggers (re-)announcing.
+  * default/fallback is `="additions text"` (added elements or text changes trigger (re-)announcing).
+* `aria-busy="true"` = ignore changes to element despite having `aria-live="polite"` for example.
+  * Example (1/2): `<div aria-live="polite" aria-busy="true">` until everything's loaded.
+  * Example (2/2): `<div aria-live="polite" aria-busy="false">` when ready.
+  * Note: `="false"` by default, i.e. do not ignore by default. Makes sense.
 
 </details>
 
