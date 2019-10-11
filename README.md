@@ -177,6 +177,8 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
   * Notes: `aria-labelledby` can be put on any element, not just a `label` element, but it does not give you the nice label-clicking behaviour that `label` gives you. Also, you place `aria-labelledby="..."` on the element, which is opposite of putting `for="..."` on the `label`. `aria-labelledby` can take a list of elements to concatenate the name from (even from the element itself! and even from hidden elements!).
 
 * In terms of precedence: `aria-labelledby` > `aria-label` > native `label`
+* ARIA roles may be redundant in some cases: e.g.: `<input type="checkbox" role="checkbox">` or `<main role="main">`
+  * but you might need this redundancy for wider browser support.
 
 </details>
 
