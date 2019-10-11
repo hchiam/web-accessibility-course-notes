@@ -207,6 +207,18 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
     </div>
     ```
 
+#### Hiding/Showing Only for Accessibility Tree (AT)
+
+* Hide only everyone:
+  * Native explicitly hidden: `visibility: hidden;`, `display:none`, or attribute `hidden`.
+* Show only in AT:
+  * Make far off screen, e.g. `position: absolute; left: -10000px;`
+  * `aria-label="Some text that only screen-readers can access."`
+  * `aria-labelledby="some-hidden-element"`
+  * `aria-describedby="some-hidden-element"`
+* Hide only in AT:
+  * `aria-hidden="true"` (hides from AT all its descendants, except element referred to by `aria-labelledby` or `aria-describedby`, which makes sense).
+
 </details>
 
 <details>
