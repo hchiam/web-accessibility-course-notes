@@ -247,9 +247,6 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
 </details>
 
 <details>
-<summary>Random Notes</summary>
-
-<details>
 <summary>Style</summary>
 
 ### Style
@@ -308,6 +305,9 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
 #### Colour Contrast
 
 </details>
+
+<details>
+<summary>Random Notes</summary>
 
 ### Random Notes
 
