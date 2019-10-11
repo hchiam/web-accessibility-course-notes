@@ -114,7 +114,7 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
 
 * ```js
     // set ARIA role = radio group
-    this.el.setAttribute('role', 'radiogroup');
+    this.el.setAttribute('role', 'radiogroup'); // role!!!
 
     var firstButton = true;
     for (var button of this.buttons) {
@@ -126,23 +126,23 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
       }
 
       // set ARIA role = radio
-      button.setAttribute('role', 'radio');
+      button.setAttribute('role', 'radio'); // role!!!
     }
   ```
 
 * ```js
     RadioGroup.prototype.changeFocus = function() {
       // old button:
-      this.focusedButton.tabIndex = -1;
+      this.focusedButton.tabIndex = -1; // tabindex!!!
       this.focusedButton.removeAttribute('checked');
-      this.focusedButton.setAttribute('aria-checked', 'false');
+      this.focusedButton.setAttribute('aria-checked', 'false'); // ARIA!!!
 
       // new button:
       this.focusedButton = this.buttons[this.focusedIdx];
-      this.focusedButton.tabIndex = 0;
+      this.focusedButton.tabIndex = 0; // tabindex!!!
       this.focusedButton.focus();
       this.focusedButton.setAttribute('checked', '');
-      this.focusedButton.setAttribute('aria-checked', 'true');
+      this.focusedButton.setAttribute('aria-checked', 'true'); // ARIA!!!
     };
   ```
 
