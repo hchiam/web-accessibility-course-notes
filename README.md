@@ -35,6 +35,8 @@ Design for everyone. Making your website accessible helps everyone. Disability i
 
 Aside: I found [an article on Medium.com that gives more examples](https://medium.com/swlh/why-web-accessibility-is-far-more-important-than-you-think-831d9bfdf9af) and [another one](https://medium.com/valtech-design/inclusive-design-dd4e03f82094).
 
+You don't have to choose between a delightful website and checking some "accessibility checkbox".
+
 Tip: Start with the most frequently-used pieces of UI.
 
 A11y = make sure all of your users can use your content.
