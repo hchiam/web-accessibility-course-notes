@@ -12,6 +12,14 @@ My notes for the Udacity course: <https://classroom.udacity.com/courses/ud891>
 
 <https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en>
 
+### NoCoffee (to Simulate Vision Deficiencies)
+
+<https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl?hl=en-US>
+
+### High Contrast (check if content still visible)
+
+<https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph?hl=en>
+
 ### ARIA design patterns and links to __*live examples*__
 
 <https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex>
@@ -26,6 +34,12 @@ My notes for the Udacity course: <https://classroom.udacity.com/courses/ud891>
 Design for everyone. Making your website accessible helps everyone. Disability is more broad than what you might typically think of as disability: aging, temporary disability, and situational disability even for healthy individuals. This goes beyond permanent disability and can affect everyone.
 
 Aside: I found [an article on Medium.com that gives more examples](https://medium.com/swlh/why-web-accessibility-is-far-more-important-than-you-think-831d9bfdf9af) and [another one](https://medium.com/valtech-design/inclusive-design-dd4e03f82094).
+
+Tip: Start with the most frequently-used pieces of UI.
+
+A11y = make sure all of your users can use your content.
+
+Good a11y = good UX.
 
 </details>
 
@@ -329,6 +343,18 @@ Aside: I found [an article on Medium.com that gives more examples](https://mediu
 * **32dp margin around touch target** (horizontally and vertically)
 
 #### Colour Contrast
+
+* For users with 20/40 vision, commonly ages 80+:
+  * **4.5:1 minimum contrast** in text and images of text.
+  * **3:1 minimum contrast** in large text > 14 point bold.
+* For users with low vision impairments or colour vision deficiencies:
+  * **7:1 minimum contrast** in text and images of text.
+  * **4.5:1 minimum contrast**in large text > 14 point bold.
+* Use the Chrome extension [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) or Chrome Dev Tools > Audits > Accessibility > Run audits. (Note: right now both only work on http/https pages, not local html files.)
+* 100s of millions, about 1 in 20 people have a colour vision deficiency, only expected to increase with aging populations.
+  * -> Convey info with more than only colour differences! "Don't rely on colour alone."
+* Use [NoCoffee](https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl?hl=en-US) Chrome extension to test your UI with different kinds of simulated vision impairments.
+* Use [High Contrast](https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph?hl=en) Chrome extension to test your content still shows up for users who have high contrast settings set up.
 
 </details>
 
