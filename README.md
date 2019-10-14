@@ -1,6 +1,6 @@
 # Web Accessibility (a11y) Course Notes
 
-My notes for the Udacity course: <https://classroom.udacity.com/courses/ud891> (and it's companion [GitHub repo](https://github.com/udacity/ud891))
+My notes for the Udacity course: <https://classroom.udacity.com/courses/ud891> (and its companion [GitHub repo](https://github.com/udacity/ud891))
 
 ## Resources
 
@@ -10,15 +10,15 @@ My notes for the Udacity course: <https://classroom.udacity.com/courses/ud891> (
 
 ### Chrome Web Server
 
-<https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en>
+<https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb>
 
 ### NoCoffee (to Simulate Vision Deficiencies)
 
-<https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl?hl=en-US>
+<https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl>
 
 ### High Contrast (check if content still visible)
 
-<https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph?hl=en>
+<https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph>
 
 ### ARIA design patterns and links to __*live examples*__
 
@@ -72,7 +72,7 @@ Good a11y = good UX.
     var lastTabStop = focusableElements[focusableElements.length - 1];
     ```
 
-  * <https://classroom.udacity.com/courses/ud891/lessons/7962031279/concepts/79621414230923>
+    * (And example usage of that ↑ is here: <https://classroom.udacity.com/courses/ud891/lessons/7962031279/concepts/79621414230923>)
 
 </details>
 
@@ -90,7 +90,7 @@ Good a11y = good UX.
   * **state** (example: "collapsed")
   * (These *are* the affordances!)
 * Accessibility tree <- DOM tree:
-  * Pretty much the same.
+  * Pretty much the same, except visuals removed and items "linearized" (to fit one dimension of speech over time).
   * Much of the DOM has implicit semantic meaning. (Example: `button` instead of `div`)
 * `alt="description of the image in its context to provide the same experience"`. Tricky example: header logo is also link to home. Instead of `"Home"`, just do `"<Page name as shown in logo image>"`.
 * `alt=""` = good if a description would be redundant in the image's context, but we also don't want the screen reader to read out the file name either. Tricky example: magnifying glass next to search field that already gets read out as a searchbox.
@@ -98,7 +98,7 @@ Good a11y = good UX.
 * Don't go overboard with screen-reader-only headers.
 * Make link text usable for screen reader shortcut lists:
   * Bad: "Learn more." (About what? Unclear in a list of link texts.)
-  * Good: "Learn more about responsive layouts."
+  * OK: "Learn more about responsive layouts."
   * Better: "Responsive Layouts" (Turn the title into a link.)
 * Example semantic HTML elements: `main`, `header`, `footer`, `nav`, `section` (usually has a h1/h2/... header in it), `article`, and `aside`.
   * You can simplify CSS to refer to `header` instead of `.header`, while also making the HTML more semantic for assistive tech users.
@@ -114,8 +114,8 @@ Good a11y = good UX.
 
 * Built-in HTML Semantics Sometimes Isn't Enough
   * Dropdowns: currently no standard HTML element.
-  * Another example: urgent user notification (`<div role="alert">Could not connect!</div>`)
-* Example: `role="checkbox"` and then ALSO add `aria-checked="true"` and `aria-checked="false"` (ARIA HTML properties must be explicitly indicated. Good for custom elements.)
+  * Another example: urgent user notification (`<div role="alert">Could not connect!</div>` -> `aria-live`)
+* Example: `role="checkbox"` and then ALSO add `aria-checked="true"` or `aria-checked="false"` (ARIA HTML properties must be explicitly indicated. Good for custom elements.)
   * But you have to take care of a lot more.
   * Example: `this.el.setAttribute('role', 'checkbox');`
   * Example: `if (this.el.hasAttribute('checked')) { this.el.setAttribute('aria-checked', 'true'); }`
@@ -155,8 +155,8 @@ Good a11y = good UX.
 
       // new button:
       this.focusedButton = this.buttons[this.focusedIdx];
-      this.focusedButton.tabIndex = 0; // tabindex!!!
       this.focusedButton.focus();
+      this.focusedButton.tabIndex = 0; // tabindex!!!
       this.focusedButton.setAttribute('checked', '');
       this.focusedButton.setAttribute('aria-checked', 'true'); // ARIA!!!
     };
@@ -178,7 +178,7 @@ Good a11y = good UX.
   </button>
   ```
 
-* `aria-labelledby` example: name/label = "Drink options" from another element (not just whatever's in "..."):
+* `aria-labelledby` example: name/label = "Drink options" from another element (not whatever's in "..." below):
 
   ```html
   <span id="rg-label">
@@ -201,13 +201,13 @@ Good a11y = good UX.
 #### ARIA Relationship Attributes
 
 * Example: `aria-labelledby="..."` = label/name (see earlier notes).
-* `aria-owns` = "treat ... as my **child** element" (even if separate in the DOM), like for submenus.
+* `aria-owns="..."` = "treat ... as my **child** element" (even if separate in the DOM), like for submenus.
   * But why not just do so in DOM? Maybe for visual presentation or because of element reuse in different contexts.
   * `aria-owns` is a very common ARIA relationship attribute. Good to know!
-* `aria-activedescendant` = "present ... as the **apparent focused** element when I have page focus" (this is not actually moving the roving focus).
+* `aria-activedescendant="..."` = "present ... as the **apparent focused** element when I have page focus" (this is not actually moving the roving focus).
   * Example: typing in a textbox that has page focus, but while reading out an apparently-focused filtered option shown in a dropdown.
   * This basically can graft together different parts of the DOM onto this node in the Accessibility Tree.
-* `aria-describedby` = "use ... as my non-critical description" (NOT name/label) as extra info, like password requirements (vs. password characters typed). Even if that identified element is hidden from the DOM (just like aia-labelledby).
+* `aria-describedby="..."` = "use ... as my non-critical description" (NOT name/label) as extra info, like password requirements (vs. password characters typed). Even if that identified element is hidden from the DOM (just like aia-labelledby).
 * `aria-posinset` and `aria-setsize` = "specify on this element its actual position in the set, and the actual number of items in its set", like when you don't know the size of the list when using lazy loading.
   * Example:
 
@@ -226,38 +226,38 @@ Good a11y = good UX.
 
 #### Hiding/Showing Only for Accessibility Tree (AT)
 
-* Hide element only everyone:
-  * Native explicitly hidden: `visibility: hidden;`, `display:none`, or attribute `hidden`.
+* Hide element for everyone:
+  * Native explicit hiding: `visibility: hidden;`, `display:none`, or attribute `hidden`.
 * Show label only in AT:
   * Make far off screen, e.g. `position: absolute; left: -10000px;`
   * Or: `aria-label="Some text that only screen-readers can access."`
   * Or: `aria-labelledby="some-hidden-element"`
   * Or: `aria-describedby="some-hidden-element-for-extra-info"`
 * Hide element only in AT:
-  * `aria-hidden="true"` (hides from AT all its descendants, except element referred to by `aria-labelledby` or `aria-describedby`, which makes sense based on earlier notes).
+  * `aria-hidden="true"` (hides from AT all its descendants, except elements referred to by `aria-labelledby` or `aria-describedby`, which makes sense based on earlier notes).
 
 #### Alerting the User
 
 * Instead of waiting for user to get to the element in the DOM.
-* `aria-live="..."`: off (default/fallback), polite, assertive.
+* `aria-live="..."`: `off` (default/fallback), `polite`, `assertive`.
   * "polite" = when you're done whatever you're doing. (waits)
   * "assertive" = you need to know this right now! (interrupts)
 * **Troubleshooting tips when `aria-live` isn't speaking:**
-  * Test on different platforms, since they can react
+  * Test on different platforms, since they can react differently.
   * Try including `aria-live` attributes in initial page load.
   * Try triggering style change on the element: hidden -> visible.
-  * Try changing content of the element.
+  * Try changing the content of the element to trigger speaking.
   * Try appending new element with `aria-live`.
 * `aria-atomic` = say the whole contents each time.
-* `aria-relevant` = say the changes of this type:
-  * `="text"` = text changed.
-  * `="additions"` = added element.
-  * `="removals"` = removed element.
-  * `="all"` = `="additions removals text" = any change triggers (re-)announcing.
+* `aria-relevant` = say the changes of specified type(s):
+  * `="text"` = when text changed.
+  * `="additions"` = when element added.
+  * `="removals"` = when element removed.
+  * `="all"` = `="additions removals text"` = basically any change triggers (re-)announcing.
   * default/fallback is `="additions text"` (added elements or text changes trigger (re-)announcing).
 * `aria-busy="true"` = ignore changes to element despite having `aria-live="polite"` for example.
-  * Example (1/2): `<div aria-live="polite" aria-busy="true">` until everything's loaded.
-  * Example (2/2): `<div aria-live="polite" aria-busy="false">` when ready.
+  * Example (1/2): until everything's loaded, set this: `<div aria-live="polite" aria-busy="true">`.
+  * Example (2/2): when ready, set this: `<div aria-live="polite" aria-busy="false">`.
   * Note: `="false"` by default, i.e. do not ignore by default. Makes sense.
 
 </details>
@@ -269,11 +269,12 @@ Good a11y = good UX.
 
 #### Overview
 
-* Styles for focus and ARIA states.
+* Styles for focus.
+* Styles for ARIA states.
 * Responsive UIs (flexible device/zoom views).
 * Colour choices/contrast.
 
-#### Focus
+#### Focus Styling
 
 * Sometimes the focus ring is hard to see or doesn't look good.
 * Give alternate indication instead of only clearing outline.
@@ -311,10 +312,10 @@ Good a11y = good UX.
   }
   ```
 
-* If you implement custom elements, you might get focus rings where you don't want them, so to differentiate between mouse clicks and keyboard tags, you might be able to find a shim here: <https://github.com/alice/modality>
+* If you implement custom elements, you might get focus rings where you don't want them, so to differentiate between mouse clicks and keyboard tags, you might need to find a shim here: <https://github.com/alice/modality>
   * Right now, something like Firefox's `:-moz-focusring` is not implemented on all browsers.
 
-#### ARIA States
+#### ARIA States Styling
 
 * You can clean up the selectors while also having a way to verify you're correctly updating ARIA states. So instead of this:
 
@@ -333,16 +334,16 @@ Good a11y = good UX.
   }
   ```
 
-#### Responsive UIs (flexible device/zoom views)
+#### Responsive UIs Styling (flexible device/zoom views)
 
 * Include this in page `head`: `<meta name="viewport" content="width=device-width, initial-scale=1">`
   * (Stray observation: Easily generated with `!` snippet using Emmet in VSCode.)
 * Favour relative units over `px`:
   * `%`, `em`, or `rem` respond to zoom and responsively move other items down the page.
   * `em` and `rem` are better than `px` for text since some browsers can zoom just the text on a page via user settings.
-* **48dp minimum mobile touch target size** = 48 x 48 pixel area ~ 9 mm ~ finger pad.
+* Button size: **48dp minimum mobile touch target size** = 48 x 48 pixel area ~ 9 mm ~ finger pad.
   * You can achieve that with padding.
-* **32dp margin around touch target** (horizontally and vertically)
+* Button margin: **32dp margin around touch target** (horizontally and vertically)
 
 #### Colour Contrast
 
@@ -366,7 +367,7 @@ Good a11y = good UX.
 ### Random Notes
 
 * https://developer.mozilla.org/en-US/docs/Tools/Web_Console/The_command_line_interpreter#Helper_commands
-  * In web dev console: `$('h1')` = `document.querySelector('h1')`
-  * In web dev console: `$$('h1,h2,h3')` = `document.querySelectorAll('h1,h2,h3')` but returns an array instead of a NodeList.
+  * In web dev console: `$('h1')` = `document.querySelector('h1')` (looks like jQuery!)
+  * In web dev console: `$$('h1,h2,h3')` = `document.querySelectorAll('h1,h2,h3')` but returns an array instead of a NodeList. (Cool!)
 
 </details>
