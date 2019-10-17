@@ -8,6 +8,10 @@ My notes for the Udacity course: <https://classroom.udacity.com/courses/ud891> (
 
 <https://webaim.org/standards/wcag/checklist>
 
+### Web Accessibility VSCode Extension (live coded linter)
+
+<https://marketplace.visualstudio.com/items?itemName=MaxvanderSchee.web-accessibility>
+
 ### Chrome Web Server
 
 <https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb>
