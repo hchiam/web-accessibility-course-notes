@@ -8,6 +8,10 @@ My notes for the Udacity course: <https://classroom.udacity.com/courses/ud891> (
 
 <https://webaim.org/standards/wcag/checklist>
 
+### Automated Testing
+
+aXe Chrome Extension or Node module: <https://developers.google.com/web/fundamentals/accessibility/a11y-for-teams#automated_testing>
+
 ### Web Accessibility VSCode Extension (live coded linter)
 
 <https://marketplace.visualstudio.com/items?itemName=MaxvanderSchee.web-accessibility>
