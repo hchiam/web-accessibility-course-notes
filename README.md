@@ -2,6 +2,9 @@
 
 My notes for [Google's Udacity course](https://www.udacity.com/course/web-accessibility--ud891): <https://classroom.udacity.com/courses/ud891> (and its companion [GitHub repo](https://github.com/udacity/ud891))
 
+<details>
+<summary>Resources</summary>
+
 ## Resources
 
 ### WebAIM's WCAG 2 Checklist
@@ -39,7 +42,7 @@ aXe Chrome Extension or Node module with 0 false positives:
 
 <https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc>
 
-## Notes
+</details>
 
 <details>
 <summary>Motivation</summary>
