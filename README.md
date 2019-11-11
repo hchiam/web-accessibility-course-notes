@@ -5,8 +5,6 @@ My notes for [Google's Udacity course](https://www.udacity.com/course/web-access
 <details>
 <summary>Resources</summary>
 
-## Resources
-
 ### WebAIM's WCAG 2 Checklist
 
 <https://webaim.org/standards/wcag/checklist>
@@ -47,8 +45,6 @@ aXe Chrome Extension or Node module with 0 false positives:
 <details>
 <summary>Motivation</summary>
 
-## Motivation
-
 Design for everyone. Making your website accessible helps everyone. Disability is more broad than what you might typically think of as disability: aging, temporary disability, and situational disability even for healthy individuals. This goes beyond permanent disability and can affect everyone.
 
 Aside: I found [an article on Medium.com that gives more examples](https://medium.com/swlh/why-web-accessibility-is-far-more-important-than-you-think-831d9bfdf9af) and [another one](https://medium.com/valtech-design/inclusive-design-dd4e03f82094).
@@ -65,8 +61,6 @@ A11y = make sure all of your users can use your content.
 
 <details>
 <summary>Focus</summary>
-
-### Focus
 
 * DOM order = tab order -> so: place in logical order in the DOM, and avoid CSS that positions elements visually in a different order
 * `tabindex="-1"` = not in tab order but can be focused with focus() in js = great for modals (`document.querySelector('#modal').focus()`)
@@ -97,8 +91,6 @@ A11y = make sure all of your users can use your content.
 <details>
 <summary>Semantics</summary>
 
-### Semantics
-
 * You can address diverse assistive technologies <- by expressing semantics programmatically <- by understand affordances.
 * Affordances are like common conventions that users are used to. At the very least, they minimize training time to get used to.
 * To express semantics programmatically: (as per AIM WCAG checklist)
@@ -127,8 +119,6 @@ A11y = make sure all of your users can use your content.
 
 <details>
 <summary>Semantics: ARIA</summary>
-
-### Semantics: ARIA
 
 * Built-in HTML Semantics Sometimes Isn't Enough
   * Dropdowns: currently no standard HTML element.
@@ -283,8 +273,6 @@ A11y = make sure all of your users can use your content.
 <details>
 <summary>Style</summary>
 
-### Style
-
 #### Overview
 
 * Styles for focus.
@@ -381,8 +369,6 @@ A11y = make sure all of your users can use your content.
 
 <details>
 <summary>Random Notes</summary>
-
-### Random Notes
 
 * https://developer.mozilla.org/en-US/docs/Tools/Web_Console/The_command_line_interpreter#Helper_commands
   * In web dev console: `$('h1')` = `document.querySelector('h1')` (looks like jQuery!)
