@@ -1,6 +1,6 @@
 # Web Accessibility (a11y) Course Notes
 
-My notes for the Udacity course: <https://classroom.udacity.com/courses/ud891> (and its companion [GitHub repo](https://github.com/udacity/ud891))
+My notes for [Google's Udacity course](https://www.udacity.com/course/web-accessibility--ud891): <https://classroom.udacity.com/courses/ud891> (and its companion [GitHub repo](https://github.com/udacity/ud891))
 
 ## Resources
 
