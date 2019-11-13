@@ -11,8 +11,9 @@ My notes for [Google's Udacity course](https://www.udacity.com/course/web-access
 
 ### Automated Testing
 
-aXe Chrome Extension or Node module with 0 false positives: 
-<https://developers.google.com/web/fundamentals/accessibility/a11y-for-teams#automated_testing>
+aXe Chrome Extension or Node module with 0 false positives:
+* Quick setup for `axe-cli`: <https://github.com/hchiam/learning-axe-cli#learning-axe-cli>
+* Fuller reference: <https://developers.google.com/web/fundamentals/accessibility/a11y-for-teams#automated_testing>
 
 ### Web Accessibility VSCode Extension (live coded linter)
 
