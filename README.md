@@ -374,4 +374,6 @@ A11y = make sure all of your users can use your content.
   * In web dev console: `$('h1')` = `document.querySelector('h1')` (looks like jQuery!)
   * In web dev console: `$$('h1,h2,h3')` = `document.querySelectorAll('h1,h2,h3')` but returns an array instead of a NodeList. (Cool!)
 
+* https://github.com/hchiam/toronto-js-workshop-a11y
+
 </details>
