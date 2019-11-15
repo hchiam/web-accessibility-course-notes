@@ -56,7 +56,7 @@ Tip: Start with the most frequently-used pieces of UI.
 
 A11y = make sure all of your users can use your content.
 
-**Good a11y -> good UX.** *(Example: clearing out clutter in UI helps screen readers get to content, but also improves the UI for everyone in general.)*
+**Good a11y -> good UX.** *(Example: clearing out clutter in UI helps screen readers get to content, but also improves the UI for everyone in general. Good contrast helps for low-contrast projectors and outdoor displays.)*
 
 </details>
 
