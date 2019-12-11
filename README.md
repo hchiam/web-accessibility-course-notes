@@ -46,7 +46,7 @@ aXe Chrome Extension or Node module with 0 false positives:
 <details>
 <summary>Motivation</summary>
 
-Design for everyone. Making your website accessible helps everyone. Disability is more broad than what you might typically think of as disability: aging, temporary disability, and situational disability even for healthy individuals. This goes beyond permanent disability and can affect everyone.
+Design for everyone. Making your website accessible helps everyone. Disability is more broad than what you might typically think of as disability: aging, temporary disability, and situational disability even for healthy individuals. Different devices and different situations (e.g. outdoors screen with low contrast). This goes beyond permanent disability and can affect everyone.
 
 Aside: I found [an article on Medium.com that gives more examples](https://medium.com/swlh/why-web-accessibility-is-far-more-important-than-you-think-831d9bfdf9af) and [another one](https://medium.com/valtech-design/inclusive-design-dd4e03f82094).
 
