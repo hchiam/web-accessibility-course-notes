@@ -41,6 +41,10 @@ aXe Chrome Extension or Node module with 0 false positives:
 
 <https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc>
 
+### Zeitspace workshop
+
+<https://github.com/zeitspace/web-accessibility-session>
+
 </details>
 
 <details>
