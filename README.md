@@ -41,10 +41,6 @@ aXe Chrome Extension or Node module with 0 false positives:
 
 <https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc>
 
-### Zeitspace workshop
-
-<https://github.com/zeitspace/web-accessibility-session>
-
 </details>
 
 <details>
@@ -380,5 +376,22 @@ A11y = make sure all of your users can use your content.
   * In web dev console: `$$('h1,h2,h3')` = `document.querySelectorAll('h1,h2,h3')` but returns an array instead of a NodeList. (Cool!)
 
 * https://github.com/hchiam/toronto-js-workshop-a11y
+
+* https://github.com/zeitspace/web-accessibility-session
+  * Ontario: AODA: company > 50:
+    * -> 2014: must have WCAG 2.0 Level A
+    * -> 2021: must have WCAG 2.0 Level AA
+  * WCAG **_"quick ref"_**: <https://www.w3.org/WAI/WCAG21/quickref>
+  * practice/research later:
+    * Perceivable:
+      * -> web video add text: <https://www.w3schools.com/tags/tag_track.asp>
+    * Operable:
+      * -> skip links
+    * Understandable
+      * -> "Read more" link with screenreader-only audible extra "Read more about (...)"
+    * Robust
+      * -> research lighthouse compatibility IE checks
+    * Write down: Don't just sketch! Sketch _semantic_ blocks! At the start!
+    * Try out a11y-friendly drag and drop.
 
 </details>
