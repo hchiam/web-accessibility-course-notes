@@ -394,4 +394,6 @@ A11y = make sure all of your users can use your content.
     * Write down: Don't just sketch! Sketch _semantic_ blocks! At the start!
     * Try out a11y-friendly drag and drop.
 
+* https://github.com/hchiam/learning-extra-a11y-stuff (with example/demo)
+
 </details>
