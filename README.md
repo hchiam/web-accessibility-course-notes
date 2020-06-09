@@ -2,6 +2,12 @@
 
 My notes for [Google's Udacity course](https://www.udacity.com/course/web-accessibility--ud891): <https://classroom.udacity.com/courses/ud891> (and its companion [GitHub repo](https://github.com/udacity/ud891))
 
+**Key things I personally focus on most:**
+
+1. Use WAVE or some other automated a11y checker.
+2. Use a screen reader.
+3. Tab. Shift+Tab. Enter.
+
 <details>
 <summary>Resources</summary>
 
