@@ -10,6 +10,8 @@ These are my notes for [Google's Udacity course](https://www.udacity.com/course/
 2. Use a screen reader.
 3. Tab. Shift+Tab. Enter.
 
+## Click the following to expand:
+
 <details>
 <summary>Resources</summary>
 
