@@ -409,4 +409,8 @@ A11y = make sure all of your users can use your content.
 
 * https://github.com/hchiam/learning-extra-a11y-stuff (with example/demo)
 
+* flying focus ring: https://github.com/hchiam/flying-focus
+
+* keyboard focus trap: https://github.com/hchiam/keyboard-focus-trap
+
 </details>
