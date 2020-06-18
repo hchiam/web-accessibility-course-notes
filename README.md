@@ -413,4 +413,6 @@ A11y = make sure all of your users can use your content.
 
 * keyboard focus trap: https://github.com/hchiam/keyboard-focus-trap
 
+* map mouse positions to sounds (sonification): https://github.com/hchiam/_2dnote
+
 </details>
