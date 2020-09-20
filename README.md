@@ -422,4 +422,6 @@ A11y = make sure all of your users can use your content.
 
 - map mouse positions to sounds (sonification): https://github.com/hchiam/_2dnote
 
+- how to phrase links to avoid the unhelpful "click here": https://www.smashingmagazine.com/2012/06/links-should-never-say-click-here
+
 </details>
