@@ -6,7 +6,7 @@ These are my notes for [Google's Udacity course](https://www.udacity.com/course/
 
 ## Key things I personally focus on most:
 
-1. Use WAVE or some other automated a11y checker.
+1. Use [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) or some other automated a11y checker.
 2. Use a [screen reader](https://www.youtube.com/watch?v=5R-6WvAihms&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=7).
 3. Tab. Shift+Tab. Enter.
 
