@@ -15,10 +15,6 @@ These are my notes for [Google's Udacity course](https://www.udacity.com/course/
 <details>
 <summary>Resources</summary>
 
-### WebAIM's WCAG 2 Checklist
-
-<https://webaim.org/standards/wcag/checklist>
-
 ### Automated Testing
 
 aXe Chrome Extension or Node module with 0 false positives:
@@ -33,6 +29,10 @@ Integrate Lighthouse into your CI (e.g. GitHub Travis CI):
 ### Web Accessibility VSCode Extension (live coded linter)
 
 <https://marketplace.visualstudio.com/items?itemName=MaxvanderSchee.web-accessibility>
+
+### WebAIM's WCAG 2 Checklist
+
+<https://webaim.org/standards/wcag/checklist>
 
 ### Chrome Web Server
 
