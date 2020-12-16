@@ -196,20 +196,14 @@ A11y = make sure all of your users can use your content.
 - `aria-label` example: name = "close", not "X" (for screen-reader only):
 
   ```html
-  <button aria-label="close">
-    X
-  </button>
+  <button aria-label="close">X</button>
   ```
 
 - `aria-labelledby` example: name/label = "Drink options" from another element (not whatever's in "..." below):
 
   ```html
-  <span id="rg-label">
-    Drink options
-  </span>
-  <div role="radiogroup" aria-labelledby="rg-label">
-    ...
-  </div>
+  <span id="rg-label"> Drink options </span>
+  <div role="radiogroup" aria-labelledby="rg-label">...</div>
   ```
 
   - This is an example of an ARIA relationship attribute (links 2 or more elements).
