@@ -30,6 +30,12 @@ Integrate Lighthouse into your CI (e.g. GitHub Travis CI):
 
 <https://marketplace.visualstudio.com/items?itemName=MaxvanderSchee.web-accessibility>
 
+### Practical Solutions, Considerations, Pattern Library
+
+After (or before!) you find a11y problems via the automated tools and UX testing, here are ways to fix them:
+
+<https://inclusive-components.design>
+
 ### WebAIM's WCAG 2 Checklist
 
 <https://webaim.org/standards/wcag/checklist>
