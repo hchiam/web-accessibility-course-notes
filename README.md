@@ -21,6 +21,7 @@ aXe Chrome Extension or Node module with 0 false positives:
 
 - Quick setup for `axe-cli`: <https://github.com/hchiam/learning-axe-cli#learning-axe-cli>
 - Fuller reference: <https://developers.google.com/web/fundamentals/accessibility/a11y-for-teams#automated_testing>
+- You can also re-run the axe devtools without rebuilding the page: <https://css-tricks.com/video-screencasts/204-using-the-axe-devtools-web-accessibility-testing-browser-plugin> (and focus on re-running the most critical issues)
 
 Integrate Lighthouse into your CI (e.g. GitHub Travis CI):
 
