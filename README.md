@@ -388,6 +388,18 @@ A11y = make sure all of your users can use your content.
 </details>
 
 <details>
+<summary>P.O.U.R.</summary>
+
+My summary:
+
+- P = Perceivable = can see/hear/feel (like captions)
+- O = Operable = can use (like element focusability + keyboard + time + recovery)
+- U = Understandable = can get meaning (like labels + layout familiarity + meaningful error messages)
+- R = Robust = is flexible/cross-compatible (like mobile versus desktop)
+
+</details>
+
+<details>
 <summary>Random Notes</summary>
 
 - https://developer.mozilla.org/en-US/docs/Tools/Web_Console/The_command_line_interpreter#Helper_commands
