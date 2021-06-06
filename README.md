@@ -4,6 +4,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 These are my notes for [Google's Udacity course](https://www.udacity.com/course/web-accessibility--ud891): <https://classroom.udacity.com/courses/ud891> (and its companion [GitHub repo](https://github.com/udacity/ud891)), plus other some helpful supplemental resources/notes I found.
 
+For other notes, I also have a [repo hchiam/learning-a11y](https://github.com/hchiam/learning-a11y) with a URL that's easier to type and remember.
+
 ## Key things I personally focus on most:
 
 1. Use [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) or some other automated a11y checker.
@@ -428,6 +430,8 @@ My summary:
     - Try out a11y-friendly drag and drop.
 
 - https://github.com/hchiam/learning-extra-a11y-stuff (with example/demo)
+
+- https://github.com/hchiam/learning-a11y/blob/main/udemy-creating-accessible-websites/README.md
 
 - flying focus ring: https://github.com/hchiam/flying-focus
 
