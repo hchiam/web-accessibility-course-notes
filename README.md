@@ -8,9 +8,9 @@ For other notes, I also have a [repo hchiam/learning-a11y](https://github.com/hc
 
 ## Key things I personally focus on most:
 
-1. Use [WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) or some other automated a11y checker.
+1. Use WAVE or some other automated a11y checker, like [axe DevTools for Firefox](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools) or [axe DevTools for Chrome](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd).
 2. Use a [screen reader](https://www.youtube.com/watch?v=5R-6WvAihms&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=7).
-3. Tab. Shift+Tab. Enter.
+3. Tab. Shift+Tab. Enter. (And screen reader + arrow keys.)
 
 ## Click the following to expand:
 
