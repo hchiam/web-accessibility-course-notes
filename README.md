@@ -24,11 +24,11 @@ WebAIM's WAVE browser extension:
 
 - I personally find this tool covers a lot of concerns for you, and you can supplement it with manual testing with tabbing or a screen reader
 - Features I personally find most helpful:
-  - **Details** --> go to flags by clicking icons
-  - **Styles** toggle --> see all flags without overlap
-  - **Contrast** --> slide foreground/background colours easily and immediately check if it passes
-  - click on flags --> **REFERENCE** --> see what/why/how and plain English explanations
-  - click on flags --> **CODE** --> see the code related to the flag
+  - **Details** (in side panel) --> go to flags by clicking icons
+  - **Styles** toggle (in side panel) --> see all flags without overlap
+  - **Contrast** (in side panel) --> slide foreground/background colours easily and immediately check if it passes
+  - click on flags (in annotated page view on the right) --> **REFERENCE** --> see what/why/how and plain English explanations
+  - click on flags (in annotated page view on the right) --> **CODE** --> see the code related to the flag
 
 aXe Chrome Extension or Node module with 0 false positives:
 
