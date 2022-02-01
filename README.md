@@ -20,7 +20,7 @@ For other notes, I also have a [repo hchiam/learning-a11y](https://github.com/hc
 
 ### Automated Testing
 
-WebAIM's WAVE browser extension:
+[WebAIM's WAVE browser extension](https://wave.webaim.org/extension/):
 
 - I personally find this tool covers a lot of concerns for you, and you can supplement it with manual testing with tabbing or a screen reader
 - Features I personally find most helpful:
