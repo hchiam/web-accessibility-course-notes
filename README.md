@@ -1,8 +1,8 @@
 # Web Accessibility (a11y) Course Notes
 
-Just one of the things I'm learning. <https://github.com/hchiam/learning>
+Just one of the things I'm learning. https://github.com/hchiam/learning
 
-These are my notes for [Google's Udacity course](https://www.udacity.com/course/web-accessibility--ud891): <https://classroom.udacity.com/courses/ud891> (and its companion [GitHub repo](https://github.com/udacity/ud891)), plus other some helpful supplemental resources/notes I found.
+These are my notes for [Google's Udacity course](https://www.udacity.com/course/web-accessibility--ud891): https://classroom.udacity.com/courses/ud891 (and its companion [GitHub repo](https://github.com/udacity/ud891)), plus other some helpful supplemental resources/notes I found.
 
 For other notes, I also have a [repo hchiam/learning-a11y](https://github.com/hchiam/learning-a11y) with a URL that's easier to type and remember.
 
@@ -32,53 +32,53 @@ For other notes, I also have a [repo hchiam/learning-a11y](https://github.com/hc
 
 aXe Chrome Extension or Node module with 0 false positives:
 
-- Quick setup for `axe-cli`: <https://github.com/hchiam/learning-axe-cli#learning-axe-cli>
-- Fuller reference: <https://developers.google.com/web/fundamentals/accessibility/a11y-for-teams#automated_testing>
-- You can also re-run the axe devtools without rebuilding the page: <https://css-tricks.com/video-screencasts/204-using-the-axe-devtools-web-accessibility-testing-browser-plugin> (and focus on re-running the most critical issues)
+- Quick setup for `axe-cli`: https://github.com/hchiam/learning-axe-cli#learning-axe-cli
+- Fuller reference: https://developers.google.com/web/fundamentals/accessibility/a11y-for-teams#automated_testing
+- You can also re-run the axe devtools without rebuilding the page: https://css-tricks.com/video-screencasts/204-using-the-axe-devtools-web-accessibility-testing-browser-plugin (and focus on re-running the most critical issues)
 
 Integrate Lighthouse into your CI (e.g. GitHub Travis CI):
 
-- <https://github.com/hchiam/learning-lighthouse-ci#learning-lighthouse-ci-from-scratch-quickstart>
+- https://github.com/hchiam/learning-lighthouse-ci#learning-lighthouse-ci-from-scratch-quickstart
 
 ### Web Accessibility VSCode Extension (live coded linter)
 
-<https://marketplace.visualstudio.com/items?itemName=MaxvanderSchee.web-accessibility>
+https://marketplace.visualstudio.com/items?itemName=MaxvanderSchee.web-accessibility
 
 ### Short WCAG checklist (A, AA, AAA)
 
-<https://www.a11yproject.com/checklist>
+https://www.a11yproject.com/checklist
 
 ### Practical Solutions, Considerations, Pattern Library
 
 After (or before!) you find a11y problems via the automated tools and UX testing, here are ways to fix them:
 
-<https://inclusive-components.design>
+https://inclusive-components.design
 
 ### WebAIM's WCAG 2 Checklist
 
-<https://webaim.org/standards/wcag/checklist>
+https://webaim.org/standards/wcag/checklist
 
 ### Chrome Web Server
 
-<https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb>
+https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb
 
 ### NoCoffee (to Simulate Vision Deficiencies)
 
-<https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl>
+https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl
 
 ### High Contrast (check if content still visible)
 
-<https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph>
+https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph
 
 ### ARIA design patterns and links to **_live examples_**
 
-<https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex>
+https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex
 
 ### VisBug
 
 (Hover items to see contrast levels, or move items around like an artboard.)
 
-<https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc>
+https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc
 
 </details>
 
@@ -108,7 +108,7 @@ A11y = make sure all of your users can use your content.
 - tabindex > 0 is **NOT** recommended. Instead, aim to [put elements in the logical sequence instead](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex).
 - typically do **NOT** have to use tabindex for non-interative elements like headers (screen readers can read them)
   - exception: [SPA](https://en.wikipedia.org/wiki/Single-page_application)-like interaction menu anchor clicks -> good case for `tabindex="-1"` and `focus()` on a header that "appears" on the page
-- skip links help switch device users: hidden links to jump to page content (for an example, visit <https://github.com/> and hit tab)
+- skip links help switch device users: hidden links to jump to page content (for an example, visit https://github.com/ and hit tab)
   - example: `<a href="#main-content-id" class="skip-link">Skip to main content</a>` and `.skip-link { position: absolute; top: -40px; } .skip-link:focus { top: 0; }`
 - Helpful easy test: tab through page and see if things make sense, e.g. the focus order and focused item is shown.
   - In your browser's Console: `document.activeElement` gives you currently-focused item.
@@ -125,7 +125,7 @@ A11y = make sure all of your users can use your content.
     var lastTabStop = focusableElements[focusableElements.length - 1];
     ```
 
-    - (And example usage of that ↑ is here: <https://classroom.udacity.com/courses/ud891/lessons/7962031279/concepts/79621414230923>)
+    - (And example usage of that ↑ is here: https://classroom.udacity.com/courses/ud891/lessons/7962031279/concepts/79621414230923)
 
 </details>
 
@@ -175,7 +175,7 @@ A11y = make sure all of your users can use your content.
   - modify element behaviour.
   - add focusability.
   - add keyboard event handling.
-- ARIA design patterns and links to **_live examples_**: <https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex>
+- ARIA design patterns and links to **_live examples_**: https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex
 
 - ```js
   // set ARIA role = radio group
@@ -355,7 +355,7 @@ A11y = make sure all of your users can use your content.
   }
   ```
 
-- If you implement custom elements, you might get focus rings where you don't want them, so to differentiate between mouse clicks and keyboard tags, you might need to find a shim here: <https://github.com/alice/modality>
+- If you implement custom elements, you might get focus rings where you don't want them, so to differentiate between mouse clicks and keyboard tags, you might need to find a shim here: https://github.com/alice/modality
   - Right now, something like Firefox's `:-moz-focusring` is not implemented on all browsers.
 
 #### ARIA States Styling
@@ -431,10 +431,10 @@ My summary:
   - Ontario: AODA: company > 50:
     - -> 2014: must have WCAG 2.0 Level A
     - -> 2021: must have WCAG 2.0 Level AA
-  - WCAG **_"quick ref"_**: <https://www.w3.org/WAI/WCAG21/quickref>
+  - WCAG **_"quick ref"_**: https://www.w3.org/WAI/WCAG21/quickref
   - practice/research later:
     - Perceivable:
-      - -> web video add text: <https://www.w3schools.com/tags/tag_track.asp>
+      - -> web video add text: https://www.w3schools.com/tags/tag_track.asp
     - Operable:
       - -> skip links
     - Understandable
