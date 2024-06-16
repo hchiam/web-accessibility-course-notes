@@ -97,6 +97,12 @@ A11y = make sure all of your users can use your content.
 
 **Good a11y -> good UX.** _(Example: clearing out clutter in UI helps screen readers get to content, but also improves the UI for everyone in general. Good contrast helps for low-contrast projectors and outdoor displays.)_
 
+My summary of https://www.w3.org/WAI/business-case/ :
+- "LR" legal risk
+- "IR" innovation results
+- "MR" market reach
+- "PR" public relations
+
 </details>
 
 <details>
