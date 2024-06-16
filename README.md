@@ -100,7 +100,7 @@ A11y = make sure all of your users can use your content.
 My summary of https://www.w3.org/WAI/business-case/ :
 - "LR" legal risk
 - "IR" innovation results
-- "MR" market reach
+- "MR" market reach (around 15-20%?)
 - "PR" public relations
 
 </details>
